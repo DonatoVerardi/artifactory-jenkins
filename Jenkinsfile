@@ -23,5 +23,5 @@ node {
     server.download spec: downloadSpec, buildInfo: buildInfo
 
     // Publish build info.
-    //server.publishBuildInfo buildInfo
+    server.publishBuildInfo buildInfo
 }
