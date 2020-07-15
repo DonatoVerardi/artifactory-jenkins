@@ -19,7 +19,7 @@ node {
    
     stage name: 'Download files from Artifactory'
     // The download file contains pattern for downloading artifacts to the root directory by setting recursive=false
-    def downloadSpec = readFile 'aql-download.json'
+    def downloadSpec = readFile 'download.json'
     server.download spec: downloadSpec, buildInfo: buildInfo
 
     // Publish build info.
