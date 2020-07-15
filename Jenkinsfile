@@ -1,10 +1,7 @@
-pipeline {
-  agent any
-  stages {
-    stage ('Build') {
-      steps {
-        echo 'Running build automation'
-      }
-    }
-  }
+node {
+   stage name: 'Build'
+   echo 'My build stage'
+   load "env.groovy"
+   echo "${env.DB_URL}"
+   echo "${env.DB_URL2}"
 }
