@@ -2,7 +2,7 @@
  "files": [
     {
       "pattern": "vdbp-generic-local/",
-      "target": "/var/jenkins_home/workspace/Artifactory"
+      "target": "."
     }
   ]
 }
