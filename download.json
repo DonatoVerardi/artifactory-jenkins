@@ -2,7 +2,7 @@
  "files": [
     {
       "pattern": "vdbp-generic-local/",
-      "target": "."
+      "target": "Artifactory/"
     }
   ]
 }
