@@ -19,7 +19,16 @@ node {
    
     stage name: 'Download files from Artifactory'
     // The download file contains pattern for downloading artifacts to the root directory by setting recursive=false
-    def downloadSpec = readFile 'download.json'
+   // def downloadSpec = readFile 'download.json'
+   // Create the download spec.
+    def downloadSpec = """{
+         "files": [
+                 {
+                     "pattern": "vdbp-generic-local/",
+                     "target": "Artifactory/"
+                  }
+             ]
+         }"""
     server.download spec: downloadSpec, buildInfo: buildInfo
 
     // Publish build info.
