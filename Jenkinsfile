@@ -25,7 +25,7 @@ node {
          "files": [
                  {
                      "pattern": "${env.PATTERN}",
-                     "target": ${env.TARGET}"
+                     "target": "${env.TARGET}"
                   }
              ]
          }"""
