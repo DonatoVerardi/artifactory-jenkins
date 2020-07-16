@@ -24,8 +24,8 @@ node {
     def downloadSpec = """{
          "files": [
                  {
-                     "pattern": "vdbp-generic-local/",
-                     "target": "Artifactory/"
+                     "pattern": "${env.PATTERN}",
+                     "target": ${env.TARGET}"
                   }
              ]
          }"""
