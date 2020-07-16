@@ -36,7 +36,7 @@ node {
     def downloadSpec = """{
          "files": [
                  {
-                     "pattern": "${env.PATTERN}/${env.FILENAME}.zip",
+                     "pattern": "${env.PATTERN}${env.FILENAME}.zip",
                      "target": "${env.TARGET}"
                   }
              ]
