@@ -62,7 +62,7 @@ node {
         remote.user = userName
         remote.password = password
        
-       stage("SSH Steps Rocks!") {
+       stage("Upload file over SSH") {
             //writeFile file: 'test.sh', text: 'ls'
             //sshCommand remote: remote, command: 'for i in {1..5}; do echo -n \"Loop \$i \"; date ; sleep 1; done'
             //sshScript remote: remote, script: 'test.sh'
@@ -72,4 +72,13 @@ node {
             //sshRemove remote: remote, path: 'test.sh'
         }
     }
+   
+      /* ********************
+    *
+    * DOWNLOAD FILES
+    *
+    * ******************* */
+   stage("Clean up directory") {
+      deleteDir()
+   }
 }
