@@ -2,6 +2,7 @@ version: '3.7'
 services:
   jenkins:
     image: jenkins/jenkins:lts   ## 2.235.2    
+    hostname: jenkins
     privileged: true
     user: root
     ports:
@@ -10,3 +11,12 @@ services:
     container_name: jenkins
     volumes:
       - .\\jenkins:/var/jenkins_home
+  ssh:
+    build: ssh\\.
+    image: ssh_image
+    hostname: ssh_container
+    privileged: true
+    user: root
+    ports:
+      - "2222:22"    
+    container_name: ssh_container
