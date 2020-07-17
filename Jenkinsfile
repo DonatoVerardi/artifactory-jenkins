@@ -54,8 +54,8 @@ node {
     *
     * ******************* */
    def remote = [:]
-   remote.name = "node"
-   remote.host = "localhost"
+   remote.name = "ssh_container"
+   remote.host = "ssh_container"
    remote.allowAnyHosts = true
    
     withCredentials([usernamePassword(credentialsId: 'Deploy_Key', passwordVariable: 'password', usernameVariable: 'userName')]) {
