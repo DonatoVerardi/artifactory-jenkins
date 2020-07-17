@@ -79,6 +79,7 @@ node {
     *
     * ******************* */
    stage("Clean up directory") {
-      deleteDir()
+      echo "delete Dir"
+      //deleteDir()
    }
 }
